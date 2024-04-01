@@ -31,9 +31,3 @@ print(f"{cadena_texto_uno} {cadena_texto_dos}")
 
 ## Nonetype o null.
 variable_none = None
-
-
- 
-
-
-
