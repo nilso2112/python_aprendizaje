@@ -17,7 +17,6 @@ variable_true : bool = True
 ## Enteros "int", Flotantes "float"
 
 entero : int =  10
-
 flotante : float = 0.500
 
 print(f"El entero es: {entero}. \nEl flotante es: {flotante}.")
