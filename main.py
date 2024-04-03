@@ -1,39 +1,49 @@
-# Impresión.
-print("Hola Mundo...")
+# print 
 
-# Asignación.
+print("hola python")
 
-# "=" Asignación.
+# variable
+texto = "repaso de python"
+nombre = "Nilso"
+altura = "173"
+year = 2024
 
-variable = 'Hola Mundo de asignación...'
-print(variable)
+print (f"{texto} -{nombre} - {altura} - {year}")
+print (f"{texto} -{nombre} - {altura} - {year}")
 
-# Tipos de datos.
+#entrada
+'''sitioweb = input(" ¿cual es tu pagina web?: ")
+print("tu sitio web sitioweb es: " + sitioweb)
 
-## Booleanos. (False/True)
-variable_false : bool = False
-variable_true : bool = True
+#condiciones
+altura = int(input ("cual es tu altura?:"))
 
-## Enteros "int", Flotantes "float"
+if altura >= 180:
+    print("Eres una persona alta")
+else:
+    print("eres bajito") ''' 
+    
+ # funciones
+'''var_altura = int(input ("cual es tu altura?:"))
 
-entero : int =  10
+def mostrarAltura(altura):
+    resultado = ""
+    
+    if altura >= 180:
+        resultado = "Eres una persona alta"
+    else:
+        resultado = "eres bajito"
+        
+    return resultado
+        
+print (mostrarAltura(var_altura))'''
 
-flotante : float = 0.500
+# Listas
+personas = ["Victor", "Paco", "Pepe"]
 
-print(f"El entero es: {entero}. \nEl flotante es: {flotante}.")
+print(personas[2])
 
-## String.
-
-cadena_texto_uno : str = "Esto es una cadena de texto 1..."
-cadena_texto_dos : str = "Esto es una cadena de texto 2..."
-
-print(f"{cadena_texto_uno} {cadena_texto_dos}")
-
-## Nonetype o null.
-variable_none = None
-
-
- 
-
+for persona in personas:
+    print("-" + persona)
 
 
