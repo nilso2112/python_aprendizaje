@@ -81,16 +81,15 @@ Otro requisito opcional más complicado, es añadir, de alguna forma, un control
 print("--CALCULADORA--")
 
 print("Seleccione una opcion")
-print("1.- suma")
-print("2.- resta")
-print("3.- multiplicacion")
-print("4.- division")
-print("5.- modulo")
-print("6.- Exponente")
+print("1.- suma \n2.- resta \n3.- multiplicacion \n4.- division \n5.- modulo \n6.- Exponente")
+
 
 opcion = int(input("Teclee un numero y pulse ENTER:\n"))
-error = True
 
+# Por temas de legibilidad.
+error = False
+
+## Mi interprete de python no ejecuta el match case ya que no tengo la version de python con esa estructura, asi que lo pruebas alla.
 match opcion:
     case 1:
         print('Ha elegido la opción "suma".')
@@ -106,32 +105,38 @@ match opcion:
         print('Ha elegido la opción "exponente".')
     case _:
         print('Error, opción inválida.')
-        error = False
+        # Los errores deben marcarse como true en
+        # caso de existir, por temas de legibilidad.
+        # error = False
+        error = True
         
+# Luego verificas que no haya ocurrido un error.
 if error == True:
-    numero_1 = float(input("Especifique el primer operando:\n"))
-    numero_2 = float(input("Especifique el segundo operando:\n"))
-    
-    match opcion:
-        case 1:
-            resultado = round(numero_1 + numero_2, 2)
-            print(f"El resultado de sumar {numero_1} + {numero_2} es: {resultado}.")
-        case 2:
-            resultado = round(numero_1 - numero_2, 2)
-            print(f"El resultado de restar {numero_1} - {numero_2} es: {resultado}.")
-        case 3:
-            resultado = round(numero_1 * numero_2, 2)
-            print(f"El resultado de multiplicar {numero_1} por {numero_2} es: {resultado}.")
-        case 4:
-            resultado = round(numero_1 / numero_2, 2)
-            print(f"El resultado de dividir {numero_1} entre {numero_2} es: {resultado}.")
-        case 5:
-            resultado = round(numero_1 % numero_2, 2)
-            print(f"El resto de la división de {numero_1} entre {numero_2} es: {resultado}.")
-        case 6:
-            resultado = round(numero_1 ** numero_2, 2)
-            print(f"{numero_1} elevado a {numero_2} es: {resultado}.")
-else:
+    # Si ocurre un error notificas, manejas el error o terminas el script.
     print("Por favor, vuelva a ejecutar la calculadora.")
+    exit()
+    
+numero_1 = float(input("Especifique el primer operando:\n"))
+numero_2 = float(input("Especifique el segundo operando:\n"))
 
+match opcion:
+    case 1:
+        resultado = round(numero_1 + numero_2, 2)
+        print(f"El resultado de sumar {numero_1} + {numero_2} es: {resultado}.")
+    case 2:
+        resultado = round(numero_1 - numero_2, 2)
+        print(f"El resultado de restar {numero_1} - {numero_2} es: {resultado}.")
+    case 3:
+        resultado = round(numero_1 * numero_2, 2)
+        print(f"El resultado de multiplicar {numero_1} por {numero_2} es: {resultado}.")
+    case 4:
+        resultado = round(numero_1 / numero_2, 2)
+        print(f"El resultado de dividir {numero_1} entre {numero_2} es: {resultado}.")
+    case 5:
+        resultado = round(numero_1 % numero_2, 2)
+        print(f"El resto de la división de {numero_1} entre {numero_2} es: {resultado}.")
+    case 6:
+        resultado = round(numero_1 ** numero_2, 2)
+        print(f"{numero_1} elevado a {numero_2} es: {resultado}.")
 
+    
